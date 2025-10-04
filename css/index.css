@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@media screen and (min-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #portada {
+        height: 46.5vw;
+        background-image: url(../img/HeaderBackground.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
+    #titulo {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #markword {
+        width: 50vw;
+        height: auto;
+    }
+
+    #titulo a {
+        color: black;
+        text-decoration: none;
+        background-color: rgb(252, 207, 2);
+        padding: 0 2%;
+        margin-top: 2.5%;
+        font-size: 2.5vw;
+        font-weight: bold;
+        transition: all 0.5s;
+    }
+
+    #titulo a:hover {
+        background-color: rgb(123, 101, 1);
+    }
+
+    #nuevo_album {
+        padding-top: 2.5%;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #breach {
+        width: 33vw;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5;
+    }
+
+    #breach_portada {
+        width: 33vw;
+    }
+
+    #breach_portada img{
+        width: 100%;
+        height: auto;
+    }
+
+    #breach p:first-child {
+        font-weight: 900;
+        font-size: 4vw;
+    }
+
+    #breach p:nth-child(2) {
+        font-weight: 550;
+        font-size: 3vw;
+    }
+
+    #breach a {
+        font-weight: 550;
+        margin-top: 7%;
+        padding: 0 3%;
+        font-size: 2vw;
+        background-color: rgb(245, 31, 29);
+        text-decoration: none;
+        color: black;
+        transition: all 0.5s;
+    }
+
+    #breach a:hover {
+        background-color: rgb(131, 19, 17);
+    }
+
+    #nuevo_single {
+        background-image: url(../img/TWPBackground.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 100%;
+        height: 38vw;
+        display: flex;
+        font-family: monospace;
+        color: rgb(245, 31, 29);
+    }
+
+    #nuevo_single div:first-child {
+        width: 39%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.6vw;
+        padding: 5%;
+    }
+
+    #nuevo_single div:first-child p {
+        background-color: black;
+        padding: 5%;
+    }
+
+    #nuevo_single div:first-child a {
+        text-decoration: none;
+        color: rgb(245, 31, 29);
+    }
+
+
+    #nuevo_single div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(245, 31, 29);
+        width: 32%;
+        line-height: 1.5;
+    }
+
+    #nuevo_single div:last-child p:first-child {
+        font-size: 2.5vw;
+        font-weight: 550;
+    }
+
+    #nuevo_single div:last-child p:nth-child(2) {
+        font-size: 4.5vw;
+        font-weight: 900;
+    }
+
+    #nuevo_single div:last-child a {
+        color: black;
+        text-decoration: none;
+        font-weight: 550;
+        font-size: 2vw;
+        background-color: rgb(245, 31, 29);
+        margin-top: 7%;
+        padding: 0 9%;
+        transition: all 0.5s;
+    }
+
+    #nuevo_single div:last-child a:hover {
+        background-color: rgb(131, 19, 17);
+    }
+
+    footer {
+        background-color: black;
+        height: 5vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (max-width:767px){
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #portada {
+        background-image: url(../img/HeaderBackgroundMobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Bebas Neue', sans-serif;
+        height: 100vw;
+    }
+
+    #titulo {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #markword {
+        width: 80vw;
+        height: auto;
+    }
+
+    #titulo a {
+        color: black;
+        text-decoration: none;
+        background-color: rgb(252, 207, 2);
+        padding: 0 2%;
+        margin-top: 2.5%;
+        font-size: 5vw;
+        font-weight: bold;
+        transition: all 0.5s;
+    }
+
+    #titulo a:hover {
+        background-color: rgb(123, 101, 1);
+    }
+
+    #nuevo_album {
+        padding: 10% 0;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #breach {
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5;
+        margin-top: 5%;
+    }
+
+    #breach_portada{
+        width: 90vw;
+        display: flex;
+        order: -1;
+    }
+
+    #breach_portada img{
+        width: 100%;
+        height: auto;
+    }
+
+    #breach p:first-child {
+        display: none;
+    }
+
+    #breach p:nth-child(2) {
+        font-weight: 550;
+        font-size: 7vw;
+    }
+
+    #breach a {
+        font-weight: 550;
+        margin-top: 7%;
+        padding: 0 3%;
+        font-size: 5vw;
+        background-color: rgb(245, 31, 29);
+        text-decoration: none;
+        color: black;
+        transition: all 0.5s;
+    }
+
+    #breach a:hover {
+        background-color: rgb(131, 19, 17);
+    }
+
+    #nuevo_single {
+        background-image: url(../img/TextureBackground.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: monospace;
+        color: rgb(245, 31, 29);
+    }
+
+    #nuevo_single div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3vw;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+
+    #nuevo_single div:first-child p {
+        background-color: black;
+        padding: 5%;
+    }
+
+    #nuevo_single div:first-child a {
+        text-decoration: none;
+        color: rgb(245, 31, 29);
+    }
+
+
+    #nuevo_single div:last-child {
+        display: flex;
+        order: -1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(245, 31, 29);
+        line-height: 1.5;
+        margin: 5%;
+    }
+
+    #nuevo_single div:last-child p:first-child {
+        font-size: 6vw;
+        font-weight: 550;
+    }
+
+    #nuevo_single div:last-child p:nth-child(2) {
+        font-size: 9vw;
+        font-weight: 900;
+    }
+
+    #nuevo_single div:last-child a {
+        color: black;
+        text-decoration: none;
+        font-weight: 550;
+        font-size: 4vw;
+        background-color: rgb(245, 31, 29);
+        margin-top: 4%;
+        padding: 0 9%;
+        transition: all 0.5s;
+    }
+
+    #nuevo_single div:last-child a:hover {
+        background-color: rgb(131, 19, 17);
+    }
+
+    #degradado_barra_foot {
+    height: 10vh;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+    footer {
+        background-color: black;
+        height: 7vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 2vw;
+    }
+}

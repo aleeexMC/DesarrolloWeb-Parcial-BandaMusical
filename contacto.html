@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        <label for="checkMenu" class="labelBotonMenu">
+            <i class="fa fa-navicon" id="btnMostrar"></i>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="#">INTEGRANTES</a></li>
+                <li><a href="#">HISTORIA</a></li>
+                <li><a href="#">DISCOGRAFÍA</a></li>
+                <li><a href="#">GALERÍA</a></li>
+                <li id="contenedor_logo"><a href="#"><img src="img/Logo.png" alt="Logo" id="logo"></a>
+                </li>
+                <li><a href="#">NOTICIAS</a></li>
+                <li><a href="#">CALENDARIO</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><label for="checkMenu" class="labelBotonMenu">CERRAR</label></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="degradado_barra_nav"></div>
+        <div id="grupo_contacto">
+            <h1>Contáctanos</h1>
+            <form action="#" method="post">
+                <div class="group">
+                    <div class="form_group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required autocomplete="off" pattern="[A-Za-z]+"
+                            title="Utiliza letras de la A a la Z, ya sea en mayúscula o en minúscula">
+                    </div>
+                    <div class="form_group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required autocomplete="off" pattern="[A-Za-z]+"
+                            title="Utiliza letras de la A a la Z, ya sea en mayúscula o en minúscula">
+                    </div>
+                    <div class="form_group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required autocomplete="off">
+                    </div>
+                </div>
+                <div>
+                    <div class="form_group">
+                        <label for="mensaje">Escribe tu mensaje</label>
+                        <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="ENVIAR">
+            </form>
+        </div>
+        <div id="degradado_barra_foot"></div>
+    </main>
+    <footer>
+        Derechos Reservados 2025
+    </footer>
+</body>
+
+</html>

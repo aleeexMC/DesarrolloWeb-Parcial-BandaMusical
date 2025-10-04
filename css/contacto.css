@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@media screen and (min-width:768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        background-image: url(../img/TextureBackground.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    main h1 {
+        color: rgb(245, 31, 29);
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 6vw;
+        margin-bottom: 2.5%;
+    }
+
+    #grupo_contacto {
+        padding: 2% 5% 5%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_group {
+        display: flex;
+        flex-direction: column;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 2vw;
+        line-height: 2;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5%;
+    }
+
+    .group .form_group {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
+    .group .form_group:last-of-type {
+        flex-grow: 2;
+    }
+
+    form>div:last-of-type {
+        margin-top: 5%;
+    }
+
+    input {
+        font-size: 2vw;
+        font-family: monospace;
+        background-color: black;
+        color: rgb(245, 31, 29);
+        border: 2px solid rgb(245, 31, 29);
+        padding: 2%;
+    }
+
+    input#email {
+        padding: 1%;
+    }
+
+    input:focus {
+        border: 2px solid rgb(245, 31, 29);
+        outline: none;
+    }
+
+    textarea {
+        background-color: black;
+        font-family: monospace;
+        font-size: 2vw;
+        color: rgb(245, 31, 29);
+        border: 2px solid rgb(245, 31, 29);
+        padding: 2%;
+    }
+
+    textarea:focus {
+        border: 2px solid rgb(245, 31, 29);
+        outline: none;
+    }
+
+    input[type="submit"] {
+        margin-top: 5%;
+        padding: 0 5%;
+        background-color: rgb(245, 31, 29);
+        color: black;
+        align-self: flex-start;
+        font-weight: 900;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: rgb(125, 19, 17);
+        border: 2px solid rgb(125, 19, 17);
+    }
+
+    #degradado_barra_foot {
+    height: 10vh;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+    footer {
+        background-color: black;
+        height: 5vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (max-width:767px){
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding-top: 15%;
+        background-image: url(../img/TextureBackground.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    main h1 {
+        color: rgb(245, 31, 29);
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 10vw;
+        margin-bottom: 2.5%;
+    }
+
+    #grupo_contacto {
+        padding: 2% 5% 5%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_group {
+        display: flex;
+        flex-direction: column;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 4vw;
+        line-height: 2;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .group .form_group {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
+    .group .form_group:last-of-type {
+        flex-grow: 2;
+    }
+
+    form>div:last-of-type {
+        margin-top: 5%;
+    }
+
+    input {
+        font-size: 4vw;
+        font-family: monospace;
+        background-color: black;
+        color: rgb(245, 31, 29);
+        border: 2px solid rgb(245, 31, 29);
+        padding: 2%;
+    }
+
+    input:focus {
+        border: 2px solid rgb(245, 31, 29);
+        outline: none;
+    }
+
+    textarea {
+        background-color: black;
+        font-family: monospace;
+        font-size: 4vw;
+        color: rgb(245, 31, 29);
+        border: 2px solid rgb(245, 31, 29);
+        padding: 2%;
+    }
+
+    textarea:focus {
+        border: 2px solid rgb(245, 31, 29);
+        outline: none;
+    }
+
+    input[type="submit"] {
+        margin-top: 5%;
+        padding: 0 5%;
+        background-color: rgb(245, 31, 29);
+        color: black;
+        align-self: flex-start;
+        font-weight: 900;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: rgb(125, 19, 17);
+        border: 2px solid rgb(125, 19, 17);
+    }
+
+    #degradado_barra_foot {
+    height: 10vh;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+    footer {
+        background-color: black;
+        height: 7vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 2vw;
+    }
+}
