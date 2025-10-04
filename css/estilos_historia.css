@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    background-color: #000000;
+    background-image: url('../img/fondopiedras.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+#degradado_barra_foot {
+    height: 10vh;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 3%;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+h1 {
+    font-family: 'Bokor', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+
+.timeline-contenedor {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    padding-left: 60px;
+}
+
+.timeline-contenedor::before {
+    content: '';
+    position: absolute;
+    left: 24.5px;
+    top: 11rem;
+    bottom: 14rem;
+    width: 3px;
+    background: linear-gradient(to bottom, #69050b, #69050b);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(105, 5, 11, 0.5);
+    z-index: 1;
+}
+
+.timeline-card {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #69050b;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.timeline-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-card:nth-child(even)::before {
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border: 3px solid #69050b;
+    left: -45px;
+    z-index: 5;
+}
+
+.timeline-card>div {
+    font-family: 'Bokor', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    min-width: 100px;
+    text-align: center;
+    background-color: #69050b;
+    padding: 1rem;
+    align-self: center;
+    border: 3px solid #000000; 
+}
+
+.timeline-contenido {
+    background-color: #69050b !important;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: stretch;
+    padding: 0;
+    min-height: 250px;
+}
+
+.timeline-img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #69050b;
+}
+
+.timeline-contenido p {
+    font-family: monospace;
+    text-align: justify;
+    padding: 1rem;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 200;
+    background-color: transparent;
+}
+
+
+/* Media Queries para Tabletas */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .timeline-contenedor {
+        padding-left: 0;
+    }
+
+    /* Oculta la línea roja en tablet para redistribuir espcaio */
+    .timeline-contenedor::before {
+        display: none;
+    }
+
+    /* Se ocultan los puntos en tableta */
+    .timeline-card::before,
+    .timeline-card:nth-child(even)::before {
+        display: none;
+    }
+
+    .timeline-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .timeline-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .timeline-contenido {
+        flex-direction: column;
+        max-width: 600px;
+        order: 2;
+    }
+
+    .timeline-card>div {
+        font-size: 1.8rem;
+        order: 1;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .timeline-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .timeline-contenido p {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Queries para Celular incluso apra nokias  */
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .timeline-contenedor {
+        padding-left: 0;
+    }
+
+    /* Lo mismo q el anterior se quita la línea de tiempo en cel */
+    .timeline-contenedor::before {
+        display: none;
+    }
+
+    /* Se quitan los puntos rojos */
+    .timeline-card::before,
+    .timeline-card:nth-child(even)::before {
+        display: none;
+    }
+
+    .timeline-card {
+        flex-direction: column;
+        margin-bottom: 3rem;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .timeline-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .timeline-card>div {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-contenido {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 1rem;
+        order: 2;
+    }
+
+    .timeline-img {
+        width: 100%;
+        height: 180px;
+        margin: 0;
+    }
+
+    .timeline-contenido p {
+        font-size: 0.8rem;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-card>div {
+        font-size: 1.3rem;
+        min-width: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contenido {
+        padding: 1rem;
+    }
+}
