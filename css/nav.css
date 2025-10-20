@@ -9,6 +9,7 @@ Dentro del header:
     <input type="checkbox" name="checkMenu" id="checkMenu">
     <label for="checkMenu" class="labelBotonMenu">
         <i class="fa fa-navicon" id="btnMostrar"></i>
+        <i class="fa fa-remove" id="btnOcultar"></i>
     </label>
     <nav>
         <ul>
@@ -16,13 +17,12 @@ Dentro del header:
             <li><a href="#">HISTORIA</a></li>
             <li><a href="#">DISCOGRAFÍA</a></li>
             <li><a href="#">GALERÍA</a></li>
-            <li id="contenedor_logo"><a href="#"><img src="img/Logo.png" alt="Logo" id="logo"></a>
+            <li id="contenedor_logo"><a href="#"><img src="img/Logo.png" alt="Inicio" id="logo"></a>
             </li>
             <li><a href="#">NOTICIAS</a></li>
             <li><a href="#">CALENDARIO</a></li>
             <li><a href="#">NOSOTROS</a></li>
             <li><a href="#">CONTACTO</a></li>
-            <li><label for="checkMenu" class="labelBotonMenu">CERRAR</label></li>
         </ul>
     </nav>
     [Aqui van los otros contenedores del header, si se los han puesto claro, si no, no hay nada xd]
@@ -101,17 +101,22 @@ Dentro del contenedor que le continua al nav (si al nav ya no le continua ningun
     }
 
     #btnMostrar {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    #btnOcultar {
+        position: fixed;
+        left: -10vw;
+    }
+
+    #btnMostrar, #btnOcultar{
         background-color: black;
         color: white;
-        position: absolute;
         cursor: pointer;
         font-size: 7vw;
         padding: 2%;
-    }
-
-    #btnMostrar {
-        margin-top: 2%;
-        margin-left: 2%;
     }
 
     header nav {
@@ -121,12 +126,17 @@ Dentro del contenedor que le continua al nav (si al nav ya no le continua ningun
         display: flex;
         align-items: flex-start;
         background-color: black;
-        left: -40vw;
+        left: -50vw;
         transition: all 0.5s;
     }
 
-    #checkMenu:checked~nav {
+    #checkMenu:checked~nav{
         left: 0;
+    }
+
+    #checkMenu:checked~.labelBotonMenu>#btnOcultar{
+        left: 40vw;
+        transition: all 0.5s;
     }
 
     header ul {
@@ -140,8 +150,7 @@ Dentro del contenedor que le continua al nav (si al nav ya no le continua ningun
         line-height: 2.5;
     }
 
-    header ul a,
-    header ul label {
+    header ul a {
         color: white;
         font-size: 3.3vh;
         font-family: 'Bokor', sans-serif;
@@ -152,15 +161,7 @@ Dentro del contenedor que le continua al nav (si al nav ya no le continua ningun
         text-decoration: none;
     }
 
-    header ul label {
-        cursor: pointer;
-    }
-
     header ul a:hover {
-        color: rgb(245, 31, 29);
-    }
-
-    header ul label:hover {
         color: rgb(245, 31, 29);
     }
 
