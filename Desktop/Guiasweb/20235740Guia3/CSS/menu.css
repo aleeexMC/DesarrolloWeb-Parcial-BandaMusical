@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial;
+}
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    line-height: 2.5em;
+}
+
+nav a {
+    color: #ddd;
+    display: block;
+    padding: 0 2.5em;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: rgb(0,0,0,0.5);
+}
+
+nav>ul{
+    background-color: #333;
+    width: 100%;
+    overflow: hidden;
+}
+nav>ul>li{
+    float: left;
+}
+
+nav>ul>li>ul{
+    position: absolute;
+    display: none;
+}
+
+nav>ul>li:hover>ul{
+    display: block;
+}
+nav>ul>li>ul>li{
+    background-color: #222;
+}
+
+nav>ul>li>ul{
+    display: none;
+}
+
+nav>ul>li:hover ul{
+    display: block;
+}
+
+nav>ul>li>ul>li{
+    background-color: #222;
+}
+
+
+nav {
+    width: 960px;
+    font-size: 1.4em;
+
+}
+
+nav ul{
+    list-style: none;
+    margin: 0px 0px 65px 0px;
+    border-top: solid 2px white;
+}
+
+nav ul li{
+    float: left;
+    margin: 0px;
+    padding: 0.3em 0.5em;
+    display: block;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: #AAA;
+    transform: scale(1.25);
+}
+
+
+nav ul li a#inicio{
+    background: url("../img-1/turismo/home.png") no-repeat 0px 3px;
+    padding-left: 40px;
+}
+nav ul li a#planes{
+    background: url("../img-1/turismo/planes.png") no-repeat 0px 3px;
+    padding-left: 40px;
+
+}
+
+nav ul li a#galerias{
+    background: url("../img-1/turismo/galeria.png") no-repeat 0px 3px;
+    padding-left: 40px;
+
+}
+
+
+

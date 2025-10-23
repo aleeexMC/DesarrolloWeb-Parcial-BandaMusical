@@ -1,0 +1,115 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+
+.pila {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+
+.pila div {
+    position: absolute;
+    width: 100px;
+    height: 140px;
+}
+
+.pila div img {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+
+.resultado1 #diez_de_diamantes {
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.resultado1 #sota_de_diamantes {
+    top: 15px;
+    left: 20px;
+    z-index: 4;
+}
+
+.resultado1 #reina_de_diamantes {
+    top: 30px;
+    left: 40px;
+    z-index: 3;
+}
+
+.resultado1 #rey_de_diamantes {
+    top: 45px;
+    left: 60px;
+    z-index: 2;
+}
+
+.resultado1 #as_de_diamantes {
+    top: 60px;
+    left: 80px;
+    z-index: 1;
+}
+
+
+.resultado2 #diez_de_diamantes1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.resultado2 #sota_de_diamantes2 {
+    top: 15px;
+    left: 20px;
+    z-index: 2;
+}
+
+.resultado2 #reina_de_diamantes3 {
+    top: 30px;
+    left: 40px;
+    z-index: 3;
+}
+
+.resultado2 #rey_de_diamantes4 {
+    top: 45px;
+    left: 60px;
+    z-index: 4;
+}
+
+.resultado2 #as_de_diamantes5 {
+    top: 60px;
+    left: 80px;
+    z-index: 5;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+}

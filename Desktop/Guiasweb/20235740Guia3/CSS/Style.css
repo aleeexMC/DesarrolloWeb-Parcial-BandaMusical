@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    text-align: justify;
+    padding-bottom: 50px;
+    padding-top: 130px;
+}
+header {
+    background-color: #16A085;
+    height: 130px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+footer{
+    background-color: #16A085;
+    height:50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+header div, footer div{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+h1{
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+section{
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1%;
+
+}
+
+section article{
+    font-size: 0.9rem;
+    height: 340px;
+    width: calc(33.33% - 1%);
+    float: left;
+    padding: 1%;
+    box-sizing: border-box;
+    margin: 0.5%;
+    border: 2px dashed #16A085;
+    overflow: hidden;
+    flex: 0 0 calc(33.33% - 1%);
+}
+section article h3{
+    text-align: center;
+}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section article img{
+    height: 180px;
+    max-width: 80%;
+    margin: 5px auto;
+    display: block;
+}
+
+footer div{
+    padding-top: 1rem;
+}
+
+section article:nth-child(2){
+    background-color: rgb(70, 130, 180,0.9);
+    position: static;
+    left: 100px;
+    top: 50px;
+    display: none;
+
+
+}
+

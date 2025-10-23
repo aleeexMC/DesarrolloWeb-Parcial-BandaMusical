@@ -1,0 +1,363 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #cecfd6 0%, #2b2a2b 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #a3a6b6 0%, #908b96 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .carnet {
+            font-size: 1.2em;
+            opacity: 0.9;
+            letter-spacing: 2px;
+        }
+        
+        /* Navegación */
+        nav {
+            background: #464d52;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: #5077c7;
+        }
+        
+        /* Contenido principal */
+        main {
+            padding: 40px 30px;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #464d52;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        /* Sección personal */
+        .personalinfo {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .biotext {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .biotext p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Información del curso */
+        .course-info {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .course-info ul {
+            list-style-position: inside;
+            margin-top: 15px;
+            line-height: 2;
+        }
+        
+       
+        .guides-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .guiainfo {
+            flex: 1 1 calc(50% - 15px);
+            min-width: 280px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .guiainfo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .guiainfo h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        
+        .guiainfo p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .guiainfo ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .guiainfo ul li {
+            margin: 8px 0;
+        }
+        
+        .guiainfo ul li a {
+            color: #5077c7;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .guiainfo ul li a:hover {
+            background: #667eea;
+            color: white;
+            padding-left: 15px;
+        }
+        
+        /* FODA */
+        .foda-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        .fodafortalezas,
+        .fodaoportunidades,
+        .fodadebilidades,
+        .fodaamenazas {
+            flex: 1 1 calc(50% - 10px);
+            min-width: 280px;
+            max-width: 600px;
+            padding: 25px;
+            border-radius: 10px;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+        
+        .fodafortalezas {
+            background: linear-gradient(135deg, #c0c4c4 0%, #666a67 100%);
+        }
+        
+        .fodaoportunidades {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .fodadebilidades {
+            background: linear-gradient(135deg, #e0c7ce 0%, #bdbbae 100%);
+        }
+        
+        .fodaamenazas {
+            background: linear-gradient(135deg, #ebcdc4 0%, #e7d6b3 100%);
+        }
+        
+        .fodafortalezas h3,
+        .fodaoportunidades h3,
+        .fodadebilidades h3,
+        .fodaamenazas h3 {
+            color: black;
+            margin-top: 0;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .fodafortalezas ul,
+        .fodaoportunidades ul,
+        .fodadebilidades ul,
+        .fodaamenazas ul {
+            list-style-position: inside;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .fodafortalezas ul li,
+        .fodaoportunidades ul li,
+        .fodadebilidades ul li,
+        .fodaamenazas ul li {
+            margin: 10px 0;
+        }
+        
+       
+        footer {
+            background: #464d52;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+        
+        /* Media Queries - Tablet */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li a {
+                padding: 12px 20px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            main {
+                padding: 30px 20px;
+            }
+            
+            .guiainfo {
+                flex: 1 1 100%;
+            }
+            
+            .fodafortalezas,
+            .fodaoportunidades,
+            .fodadebilidades,
+            .fodaamenazas {
+                flex: 1 1 100%;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+        
+        /* Media Queries - Móvil */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            header h1 {
+                font-size: 1.5em;
+            }
+            
+            .carnet {
+                font-size: 1em;
+            }
+            
+            nav ul li a {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            
+            main {
+                padding: 20px 15px;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            .personalinfo {
+                padding: 20px;
+            }
+            
+            .course-info {
+                padding: 20px;
+            }
+            
+            .guiainfo {
+                padding: 20px;
+                min-width: 100%;
+            }
+            
+            .fodafortalezas,
+            .fodaoportunidades,
+            .fodadebilidades,
+            .fodaamenazas {
+                padding: 20px;
+                min-width: 100%;
+            }
+        }
+    
