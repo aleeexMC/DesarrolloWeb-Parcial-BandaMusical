@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
@@ -36,39 +36,39 @@ body::before {
 }
 
 footer {
-    background-color: #000000;
-    color: #ffffff;
-    font: 1.2em sans-serif;
-    padding: 3%;
-    text-align: center;
+        background-color: black;
+        height: 5vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 1.3vw;
 }
 
-#contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+#degradado_barra_foot {
+        height: 10vh;
+        background: #000000;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-
-/* Títulos de las subsecciones */
 section h2 {
-    font-family: 'Bokor', serif;
-    font-size: 3rem;
+    font-family: 'Bebas Neue', serif;
+    font-size: 5.5vw;
     font-weight: 700;
-    margin-top: 3rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
+    padding-bottom: 0.76%;
+    margin: 3.66% 0;
     text-align: center;
 }
 
 #miembros-actuales h2,
 #miembros-anteriores h2 {
     color: #ffffff;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 0.5vw solid #ffffff;
+    margin: 3.66% 5%;
 }
-
-/* ESTILOS DE LAS TARJETAS DE INTEGRANTEA */
-
 
 #miembros-actuales>div,
 #miembros-anteriores>div {
@@ -77,104 +77,57 @@ section h2 {
     justify-content: center;
 }
 
-/* Estilos base para todas las tarjetas de integrnates */
 .card-miembro-actual,
 .card-miembro-anterior {
     padding: 0;
-    border-radius: 0px;
-    text-align: left;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    min-height: 320px;
-    width: 300px;
-    margin: 1rem;
+    width: 30vw;
+    margin: 1.8%;
 }
 
 .card-miembro-actual:hover,
 .card-miembro-anterior:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    transform: translateY(-0.9vw);
 }
 
-/* Estilos específicos para miembros ACTUALES el duo conocido de la banda */
-.card-miembro-actual {
+.card-miembro-actual, .card-miembro-anterior  {
     background: #520308;
-    border: 12px solid #520308;
+    border: 1.37vw solid #520308;
     position: relative;
 }
 
-.card-miembro-actual h3 {
+.card-miembro-actual h3, .card-miembro-anterior h3 {
     font-family: 'Bokor', serif;
     color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 1rem 1rem 0.3rem 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 2.75vw;
+    margin: 1vw 1vw 0.55vw 1vw;
     text-align: center;
 }
 
-.card-miembro-actual .rol-miembro {
+.card-miembro-actual .rol-miembro, .card-miembro-anterior .rol-miembro {
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: 1.5vw;
     font-weight: 400;
-    margin: 0 1rem;
+    margin: 0 1%;
     line-height: 1.4;
     text-align: center;
 }
 
-/* Estilos especificos para miembros ANTERIORES los que dejaron la banda */
-.card-miembro-anterior {
-    background: #520308;
-    border: 12px solid #520308;
-    position: relative;
-}
-
-.card-miembro-anterior h3 {
-    font-family: 'Bokor', serif;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 1rem 1rem 0.3rem 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    text-align: center;
-}
-
-.card-miembro-anterior .rol-miembro {
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 400;
-    margin: 0 1rem;
-    line-height: 1.4;
-    text-align: center;
-}
-
-/* Imagen del integrante */
 .foto-miembro {
     width: 100%;
-    height: 200px;
-    border-radius: 0;
-    object-fit: cover;
-    object-position: center top;
-    margin: 0;
+    height: auto;
     display: block;
-    border: none;
 }
-
 
 .card-miembro-actual .años-actividad,
 .card-miembro-anterior .años-actividad {
     color: #ffffff;
     font-weight: 400;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: 0.3rem 1rem 1rem 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 1.5vw;
+    margin: 0.55vw 1vw 1vw 1vw;
     text-align: center;
 }
 
@@ -182,17 +135,16 @@ section h2 {
 section p {
     text-align: justify;
     line-height: 1.8;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.5vw;
+    padding: 0 5%;
 }
 
 section h1 {
-    font-family: 'Bokor', serif;
-    font-size: 3.5rem;
+    font-family: 'Bebas Neue', serif;
+    font-size: 6vw;
     font-weight: 900;
     color: #ffffff;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4vw;
     text-align: center;
 }
 
@@ -203,40 +155,45 @@ header {
 }
 
 
-@media screen and (max-width: 480px) {
-    section p {
-        font-size: 0.7rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1rem !important;
-    }
-
-    
-    #contenido>section>p {
-        font-size: 0.8rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1rem !important;
-    }
+@media screen and (max-width: 767px) {
 
     section p {
-        font-size: 0.9rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 1.5rem !important;
+        font-size: 2.7vw !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.83vw !important;
     }
 
     section h1 {
-        font-size: 2.5rem !important;
+        padding-top: 5%;
+        font-size: 10vw !important;
     }
 
     section h2 {
-        font-size: 1.8rem !important;
+        font-size: 8vw !important;
+    }
+
+    section h3 {
+        font-size: 5vw !important;
     }
 
     #contenido {
-        padding: 1rem 0.5rem;
+        padding: 1vw 3vw 0 !important;
     }
+
     .card-miembro-actual,
     .card-miembro-anterior {
-        width: 100%;
-        margin: 0.5rem 0;
+        width: 50vw !important;
+    }
+
+    .card-miembro-actual .rol-miembro,
+    .card-miembro-anterior .rol-miembro, 
+    .card-miembro-actual .años-actividad,
+    .card-miembro-anterior .años-actividad {
+        color: #ffffff;
+        font-weight: 400;
+        line-height: 1 !important;
+        font-size: 2vw !important;
+        margin: 0.55vw 1vw 1vw 1vw !important; 
+        text-align: center;
     }
 }

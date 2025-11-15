@@ -1,106 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
-    background-image: url('../img/fondo\ de\ piedras.png'); 
-    background-size: cover;     
-    background-position: center;   
-    background-repeat: no-repeat; 
-    background-attachment: fixed;  
+    background-image: url('../img/TextureBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
-
 
 .titulo {
     text-align: center;
-    margin: 2rem 0;
-    font-size: 2.9rem;
+    padding: 1vw 0;
+    font-size: 6vw;
     color: #ffffff;
-    font-family: 'Bokor';
+    font-family: 'Bebas Neue';
 }
 
 
 .grid-discos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5vw;
+    padding: 1vw 2vw;
+    justify-content: center;
 }
 
 
 .disco {
-    background: #872828;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 1rem;
+    background: #69050b;
+    padding: 1.5vw;
     text-align: center;
     transition: transform 0.2s ease;
+    height: auto;
 }
 
 .disco:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0.9vw);
 }
-
 
 .portada {
     width: 100%;
-    max-width: 250px;
+    max-width: 23vw;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
 }
 
 
 .disco h2 {
-    font-size: 1.4rem;
-    margin: 0.5rem 0 0.3rem;
+    font-size: 2.5vw;
+    margin: 0.5vw 0 0.3vw;
     color: #ffffff;
+    font-family: 'Bebas Neue', serif;
 }
 
 .disco p {
-    margin: 0.2rem 0 1rem;
+    margin: 0.2vw 0 0.5vw;
     color: #fefefe;
-    font-size: 0.95rem;
+    font-size: 1.5vw;
+    font-family: monospace, serif;
 }
-
 
 .disco iframe {
     border: none;
-    margin-top: 0.5rem;
-    border-radius: 8px;
+    margin-top: 0.5vw;
     width: 100%;
-    height: 200px; 
 }
 
 
 .disco iframe[src*="spotify"] {
-    height: 80px; 
+    height: 20%;
 }
 
-/* Responsividad extra para móviles */
-@media (max-width: 600px) {
+.youtube-link {
+    display: inline-block;
+    padding: 0.4vw 0.8vw;
+    margin-top: 0.5vw;
+    background-color: rgb(252, 207, 2);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.youtube-link:hover {
+    background-color: rgb(123, 101, 1);
+}
+
+footer {
+        background-color: black;
+        height: 5vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 1.3vw;
+}
+
+#degradado_barra_foot {
+        height: 10vh;
+        background: #000000;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media (max-width: 767px) {
     .titulo {
-        font-size: 1.6rem;
+        font-size: 10vw;
+        padding: 15% 0 5%;
     }
 
     .grid-discos {
-        gap: 1rem;
-        padding: 1rem;
+        gap: 1vw;
+        padding: 1vw 10vw;
     }
 
     .portada {
         max-width: 100%;
     }
-}
 
-.youtube-link {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    margin-top: 0.5rem;
-    background-color: #ffffff;
-    color: rgb(152, 42, 41);
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .portada {
+        width: 100%;
+        max-width: 46vw;
+        height: auto;
+        margin-bottom: 1vw;
+    }
 
-.youtube-link:hover {
-    background-color: #cc0000;
+    .disco {
+        padding: 5vw;
+    }
+
+    .disco iframe {
+        border: none;
+        margin-top: 0.5vw;
+        width: 70vw;
+    }
+
+
+    .disco iframe[src*="spotify"] {
+        height: 20vw;
+    }
+
+    .disco p {
+        margin: 0.2vw 0 0.5vw;
+        color: #fefefe;
+        font-size: 3vw;
+        font-family: monospace, serif;
+    }
+
+    .disco h2 {
+        font-size: 6vw;
+        margin: 0.5vw 0 0.3vw;
+        color: #ffffff;
+        font-family: 'Bebas Neue', serif;
+    }
 }
