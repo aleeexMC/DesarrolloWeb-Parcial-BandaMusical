@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados - Twenty One Pilots</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/empleados.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module" src="./js/autenticacion.js" defer></script>
+    <script type="module" src="./js/empleados.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="checkMenu" id="checkMenu">
+        <label for="checkMenu" class="labelBotonMenu">
+            <i class="fa fa-navicon" id="btnMostrar"></i>
+            <i class="fa fa-remove" id="btnOcultar"></i>
+        </label>
+        <nav id="barraNavegacionPrincipal">
+            <ul>
+                <li><a href="miembros.html">INTEGRANTES</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="discografia.html">DISCOGRAFÍA</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li id="contenedor_logo"><a href="index.html"><img src="img/Logo.png" alt="Inicio" id="logo"></a>
+                </li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+                <li><a href="calendar.html">CALENDARIO</a></li>
+                <li><a href="integrantes.html">NOSOTROS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="degradado_barra_nav"></div>
+        <div id="contenido">
+            <h1>Lista de Usuarios</h1>
+            <button id="agregarEmpleadoModal" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#contactModal" disabled="true">Agregar
+                empleado</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Correo</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody id="userList">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Agregar Empleado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="contactForm">
+                            <input type="hidden" id="contactId">
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="text" class="form-control" id="password" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="registrarUsuario">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="degradado_barra_foot"></div>
+    </main>
+
+    <footer>
+        Derechos reservados 2025
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
