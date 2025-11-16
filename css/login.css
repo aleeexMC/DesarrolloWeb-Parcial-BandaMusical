@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background-image: url(../img/TextureBackground.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#image {
+  display: flex;
+  justify-content: center;
+  padding: 5vw 0;
+
+}
+
+#image img {
+  width: 50vw;
+  height: auto;
+}
+
+main {
+  border: 0.8vw solid rgb(245, 31, 29);
+  padding: 5%;
+  margin: 0 20% 5%;
+}
+
+main h1 {
+  font-family: 'Bebas Neue', serif;
+  font-size: 6vw;
+  color: rgb(245, 31, 29);
+}
+
+main p {
+  font-family: monospace;
+  font-size: 2vw;
+  color: rgb(245, 31, 29);
+}
+
+main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10%;
+}
+
+.group label {
+  font-family: monospace;
+  font-size: 2vw;
+  color: rgb(245, 31, 29);
+  margin-bottom: 3%;
+}
+
+.group input {
+  font-size: 2vw;
+  font-family: monospace;
+  background-color: black;
+  color: rgb(245, 31, 29);
+  border: 0.3vw solid rgb(245, 31, 29);
+  padding: 2%;
+}
+
+input:focus {
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 5%;
+  padding: 1% 5%;
+  background-color: rgb(252, 207, 2);;
+  color: black;
+  align-self: flex-start;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: monospace;
+  border: none;
+  font-size: 2vw;
+}
+
+button[type="submit"]:hover{
+  background-color: rgb(123, 101, 1)
+}
+
+@media screen and (max-width: 1080px) {
+
+  #image {
+    padding: 10vw 0;
+  }
+
+  #image img {
+    width: 80vw;
+  }
+
+  main {
+    margin: 0 5% 10%;
+    padding: 8%;
+    border-width: 1.5vw;
+  }
+
+  main h1 {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  main p {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .group label {
+    font-size: 4vw;
+  }
+
+  .group input {
+    font-size: 4.5vw;
+    padding: 4%;
+  }
+
+  button[type="submit"] {
+    font-size: 4vw;
+    padding: 3% 8%;
+    width: 100%;
+    text-align: center;
+  }
+}
