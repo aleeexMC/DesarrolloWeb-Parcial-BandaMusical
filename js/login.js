@@ -7,7 +7,7 @@ document.getElementById('login').addEventListener('click', async (e) => {
   const password = document.getElementById('loginPassword').value;
 
   try{
-    const userData = iniciarSesion(email, password);
+    const userData = await iniciarSesion(email, password);
 
     if (userData) {
       window.location.href = './index.html';

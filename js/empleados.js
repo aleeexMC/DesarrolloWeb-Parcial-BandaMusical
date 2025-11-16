@@ -5,10 +5,11 @@ onAuthStateChanged(auth, async (user) => {
     if (user) {
         let usuario = await obtenerUsuario(user.uid);
         console.log(usuario.rol);
+        const btn = document.getElementById('agregarEmpleadoModal');
         if (usuario.rol == "Administrador") {
-            document.getElementById('agregarEmpleadoModal').setAttribute('disabled', 'false');
+            btn.disabled = false;
         } else {
-            document.getElementById('agregarEmpleadoModal').setAttribute('disabled', 'true');
+            btn.disabled = true;
         }
     }
 });
