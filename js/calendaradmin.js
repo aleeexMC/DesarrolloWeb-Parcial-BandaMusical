@@ -1,3 +1,5 @@
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const loginSection = document.getElementById("login-section");
   const adminPanel = document.getElementById("admin-section");
@@ -7,19 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlInput = document.getElementById("concert-tickets");
   const addButton = document.getElementById("btn-save")
 
+const auth = getAuth();
+onAuthStateChanged(auth, user => {
+  if (user) {
+    // mostrar admin
+    document.getElementById("admin-section").classList.remove("hidden");
+    loginSection.classList.add("hidden");
+  } else {
+    // redirigir o mostrar login
+    window.location.href = "login.html";
+  }
+});
 
-  // Si quieres controlar qué correos son admin:
-    firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-      // Mostrar panel si el usuario está logueado
-        adminPanel.classList.remove("hidden");
-        loginSection.classList.add("hidden");
-        } else {
-        // Mostrar mensaje de no autenticado
-        adminPanel.classList.add("hidden");
-        loginSection.classList.remove("hidden");
-    }
-  });
 
   // Lógica para agregar conciertos
   addButton.addEventListener("click", () => {
@@ -50,3 +51,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
