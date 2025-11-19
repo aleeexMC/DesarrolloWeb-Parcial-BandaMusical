@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="css/login.css">
+  <script type="module" src="./js/login.js" defer></script>
+</head>
+
+<body>
+  <div id="image">
+    <img src="img/Markword.png" alt="Twenty One Pilots">
+  </div>
+  <main>
+    <header>
+      <h1 id="titulo-login">Iniciar sesión</h1>
+      <p class="sub">Bienvenido, ingresa tus credenciales</p>
+    </header>
+
+    <form id="loginForm">
+      <div class="group">
+        <label for="loginEmail">Correo electrónico:</label>
+        <input id="loginEmail" name="email" type="email" autocomplete="off" required>
+      </div>
+
+      <div class="group">
+        <label for="loginPassword">Contraseña:</label>
+        <input id="loginPassword" name="password" type="password" autocomplete="off">
+      </div>
+
+      <button type="submit" id="login">Iniciar sesión</button>
+       
+    </form>
+  </main>
+</body>
+
+</html>

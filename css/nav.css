@@ -1,0 +1,193 @@
+/*
+Etiquetas en HTML
+
+Dentro de head:
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+Dentro del header:
+    <input type="checkbox" name="checkMenu" id="checkMenu">
+    <label for="checkMenu" class="labelBotonMenu">
+        <i class="fa fa-navicon" id="btnMostrar"></i>
+        <i class="fa fa-remove" id="btnOcultar"></i>
+    </label>
+    <nav>
+        <ul>
+            <li><a href="#">INTEGRANTES</a></li>
+            <li><a href="#">HISTORIA</a></li>
+            <li><a href="#">DISCOGRAFÍA</a></li>
+            <li><a href="#">GALERÍA</a></li>
+            <li id="contenedor_logo"><a href="#"><img src="img/Logo.png" alt="Inicio" id="logo"></a>
+            </li>
+            <li><a href="#">NOTICIAS</a></li>
+            <li><a href="#">CALENDARIO</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </nav>
+    [Aqui van los otros contenedores del header, si se los han puesto claro, si no, no hay nada xd]
+
+Dentro del contenedor que le continua al nav (si al nav ya no le continua ningun contenedor, en el contenedor que le sigue al header):
+    <div id="degradado_barra_nav"></div>
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+
+@media screen and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .labelBotonMenu,
+    #checkMenu {
+        display: none;
+    }
+
+    header nav {
+        width: 100%;
+        height: 10vw;
+        display: flex;
+        align-items: center;
+        background-color: black;
+    }
+
+    header ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    header ul a {
+        text-decoration: none;
+        color: white;
+        font-size: 2.3vw;
+        font-family: 'Bokor', sans-serif;
+        transition: all 0.5s;
+    }
+
+    header ul a:hover {
+        color: rgb(245, 31, 29);
+    }
+
+    #contenedor_logo {
+        width: 10%;
+    }
+
+    #logo {
+        width: 100%;
+        height: auto;
+    }
+
+    #degradado_barra_nav {
+        height: 10vh;
+        background: #000000;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #checkMenu {
+        display: none;
+    }
+
+    #btnMostrar {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    #btnOcultar {
+        position: fixed;
+        left: -10vw;
+    }
+
+    #btnMostrar, #btnOcultar{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-size: 7vw;
+        padding: 2%;
+    }
+
+    header nav {
+        position: fixed;
+        width: 40vw;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        background-color: black;
+        left: -50vw;
+        transition: all 0.5s;
+    }
+
+    #checkMenu:checked~nav{
+        left: 0;
+    }
+
+    #checkMenu:checked~.labelBotonMenu>#btnOcultar{
+        left: 40vw;
+        transition: all 0.5s;
+    }
+
+    header ul {
+        margin: 10% 0;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        line-height: 2.5;
+    }
+
+    header ul a {
+        color: white;
+        font-size: 3.3vh;
+        font-family: 'Bokor', sans-serif;
+        transition: all 0.5s;
+    }
+
+    header ul a {
+        text-decoration: none;
+    }
+
+    header ul a:hover {
+        color: rgb(245, 31, 29);
+    }
+
+    #contenedor_logo {
+        width: 50%;
+        order: -1;
+    }
+
+    #logo {
+        width: 100%;
+        height: auto;
+    }
+
+    #degradado_barra_nav {
+        display: none;
+    }
+}
+
+
+#barraNavegacionPrincipal ul {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    gap: 1vw;         
+}
+
+#barraNavegacionPrincipal ul li a {
+    white-space: nowrap; /* para que el texto no se parta en dos líneas */
+}

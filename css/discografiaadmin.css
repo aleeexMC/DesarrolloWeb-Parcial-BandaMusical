@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+
+
+body {
+    background-color: black;
+    background-image: url('../img/TextureBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+}
+
+
+#adminWrapper {
+    max-width: 1200px;
+    margin: 4vw auto;
+    padding: 3vw;
+    background: rgba(0, 0, 0, 0.75);
+    border: 0.5vw solid rgb(245, 31, 29);
+}
+
+
+#adminWrapper h1 {
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    color: rgb(245, 31, 29);
+    letter-spacing: 2px;
+    margin-bottom: 3vw;
+}
+
+
+#formAlbum {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-family: monospace;
+    font-size: clamp(14px, 1.5vw, 22px);
+    margin-bottom: .7vw;
+    color: rgb(245, 31, 29);
+}
+
+.campo input,
+.campo textarea {
+    background-color: black;
+    border: 0.35vw solid rgb(245, 31, 29);
+    padding: 1vw;
+    font-family: monospace;
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: rgb(245, 31, 29);
+    resize: none;
+}
+
+.campo textarea {
+    height: 100%;
+}
+
+#agregarCancion,
+#guardarAlbum {
+    background-color: rgb(252, 207, 2);
+    border: none;
+    color: black;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: clamp(14px, 1.6vw, 22px);
+    font-weight: bold;
+    transition: .25s;
+    margin-top: auto;
+    height: fit-content;
+}
+
+#agregarCancion:hover,
+#guardarAlbum:hover {
+    background-color: rgb(123, 101, 1);
+}
+
+
+#listaCanciones {
+    margin-top: 1vw;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2vw;
+    list-style: square;
+    border-left: 0.4vw solid rgb(252, 207, 2);
+}
+
+#listaCanciones li {
+    font-family: monospace;
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: rgb(252, 207, 2);
+    margin-bottom: 0.8vw;
+}
+
+
+#tablaAlbums {
+    width: 100%;
+    margin-top: 4vw;
+    border-collapse: collapse;
+}
+
+#tablaAlbums th {
+    background: rgb(245, 31, 29);
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(16px, 2vw, 26px);
+    padding: 1vw;
+}
+
+#tablaAlbums td {
+    border-bottom: 0.2vw solid rgba(245, 31, 29, 0.5);
+    padding: 1vw;
+    color: rgb(252, 207, 2);
+    font-family: monospace;
+    font-size: clamp(14px, 1.4vw, 20px);
+}
+
+#tablaAlbums tr:hover {
+    background: rgba(245, 31, 29, 0.15);
+}
+
+.btnEliminar {
+    background: rgb(245, 31, 29);
+    padding: 0.5vw 1vw;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+    font-family: monospace;
+}
+
+.btnEliminar:hover {
+    background: rgb(150, 0, 0);
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (max-width: 900px) {
+    .fila {
+        grid-template-columns: 1fr;
+    }
+
+    #adminWrapper {
+        margin: 5vw;
+        padding: 5vw;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #adminWrapper {
+        padding: 6vw;
+        margin: 6vw 3vw;
+    }
+
+    .fila {
+        gap: 5vw;
+    }
+
+    #agregarCancion,
+    #guardarAlbum {
+        width: 100%;
+        padding: 3vw;
+    }
+
+    #tablaAlbums th,
+    #tablaAlbums td {
+        padding: 3vw 1vw;
+    }
+}

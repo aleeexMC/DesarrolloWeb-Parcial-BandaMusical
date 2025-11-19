@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: black;
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+    color: rgb(245, 31, 29);
+    font-family: monospace;
+    font-size: 1.3vw;
+}
+
+#degradado_barra_foot {
+    height: 10vh;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+main {
+    background-color: black;
+    background-image: url(../img/TextureBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#contenido{
+    padding: 0 5%;
+}
+
+main h1 {
+    font-family: 'Bebas Neue', serif;
+    font-size: 6vw;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+table {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 1%;
+    font-size: 2vw;
+    width: 25vw;
+    border: #000000 0.2vw solid;
+}
+
+td {
+    padding: 1%;
+    border: #000000 0.2vw solid;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width:767px) {
+    
+
+    main {
+        padding: 15vw 0 0;
+    }
+
+    main h1 {
+        font-size: 12vw;
+        text-align: center;
+    }
+
+}

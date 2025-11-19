@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    background-color: #000000;
+    background-image: url('../img/fondo_integrantes.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    pointer-events: none;
+}
+
+footer {
+        background-color: black;
+        height: 5vw;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 5%;
+        color: rgb(245, 31, 29);
+        font-family: monospace;
+        font-size: 1.3vw;
+}
+
+#degradado_barra_foot {
+        height: 10vh;
+        background: #000000;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section h2 {
+    font-family: 'Bebas Neue', serif;
+    font-size: 5.5vw;
+    font-weight: 700;
+    padding-bottom: 0.76%;
+    margin: 3.66% 0;
+    text-align: center;
+}
+
+#miembros-actuales h2,
+#miembros-anteriores h2 {
+    color: #ffffff;
+    border-bottom: 0.5vw solid #ffffff;
+    margin: 3.66% 5%;
+}
+
+#miembros-actuales>div,
+#miembros-anteriores>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-miembro-actual,
+.card-miembro-anterior {
+    padding: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 30vw;
+    margin: 1.8%;
+}
+
+.card-miembro-actual:hover,
+.card-miembro-anterior:hover {
+    transform: translateY(-0.9vw);
+}
+
+.card-miembro-actual, .card-miembro-anterior  {
+    background: #520308;
+    border: 1.37vw solid #520308;
+    position: relative;
+}
+
+.card-miembro-actual h3, .card-miembro-anterior h3 {
+    font-family: 'Bokor', serif;
+    color: #ffffff;
+    font-size: 2.75vw;
+    margin: 1vw 1vw 0.55vw 1vw;
+    text-align: center;
+}
+
+.card-miembro-actual .rol-miembro, .card-miembro-anterior .rol-miembro {
+    color: #ffffff;
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 0 1%;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.foto-miembro {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-miembro-actual .años-actividad,
+.card-miembro-anterior .años-actividad {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5vw;
+    margin: 0.55vw 1vw 1vw 1vw;
+    text-align: center;
+}
+
+
+section p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.5vw;
+    padding: 0 5%;
+}
+
+section h1 {
+    font-family: 'Bebas Neue', serif;
+    font-size: 6vw;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 0.4vw;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    z-index: 1001;
+    background-color: #000000;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    section p {
+        font-size: 2.7vw !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.83vw !important;
+    }
+
+    section h1 {
+        padding-top: 5%;
+        font-size: 10vw !important;
+    }
+
+    section h2 {
+        font-size: 8vw !important;
+    }
+
+    section h3 {
+        font-size: 5vw !important;
+    }
+
+    #contenido {
+        padding: 1vw 3vw 0 !important;
+    }
+
+    .card-miembro-actual,
+    .card-miembro-anterior {
+        width: 50vw !important;
+    }
+
+    .card-miembro-actual .rol-miembro,
+    .card-miembro-anterior .rol-miembro, 
+    .card-miembro-actual .años-actividad,
+    .card-miembro-anterior .años-actividad {
+        color: #ffffff;
+        font-weight: 400;
+        line-height: 1 !important;
+        font-size: 2vw !important;
+        margin: 0.55vw 1vw 1vw 1vw !important; 
+        text-align: center;
+    }
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    background-image: url('../img/TextureBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.noticias {
+    width: 80%;
+    max-width: none;
+    margin: 0 auto 5vw;
+}
+
+.noticias h1 {
+    font-size: 7vw;
+    margin-bottom: 3vw;
+    font-weight: bold;
+    font-family: 'Bebas Neue';
+    color: rgb(245, 31, 29);
+}
+
+.noticia {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2vw;
+    border-top: 0.3vw solid rgb(245, 31, 29);
+    padding-top: 1.5vw;
+    gap: 2vw;
+}
+
+.noticia img {
+    width: 40%;
+    max-width: 30vw;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.noticia .contenido {
+    flex: 1;
+}
+
+.noticia h2 {
+    font-size: 2vw;
+    color: rgb(245, 31, 29);
+    margin-bottom: 1vw;
+}
+
+.noticia p {
+    font-size: 1.6vw;
+    line-height: 1.6;
+    color: #ccc;
+    font-family: monospace;
+}
+
+.resaltar {
+    color: rgb(245, 31, 29);
+    font-weight: bold;
+}
+
+#degradado_barra_foot {
+    height: 10vh;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+footer {
+    background-color: black;
+    height: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+    color: rgb(245, 31, 29);
+    font-family: monospace;
+    font-size: 1.3vw;
+}
+
+@media (max-width: 768px) {
+
+    .noticias h1 {
+        padding-top: 15%;
+        font-size: 10vw;
+        text-align: center;
+    }
+    .noticia {
+        flex-direction: column;
+        text-align: center;
+        border-top: 1vw solid rgb(245, 31, 29);
+        margin-bottom: 10%;
+    }
+
+    .noticia img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .noticia .contenido {
+        text-align: left;
+    }
+
+    .noticia h2 {
+        font-size: 4vw;
+    }
+
+    .noticia p {
+        font-size: 3vw;
+    }
+}
