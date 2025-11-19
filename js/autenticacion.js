@@ -9,13 +9,6 @@ onAuthStateChanged(auth, async (user) => {
         document.querySelector("#barraNavegacionPrincipal>ul").innerHTML += `
             <li id="navEmpleados"><a href="empleados.html">EMPLEADOS</a></li>
         `;
-        
-        if (dataUser && (dataUser.rol === "Empleado" || dataUser.rol === "Administrador")) {
-            document.querySelector("#barraNavegacionPrincipal>ul").innerHTML += `
-                <li id="navAdminAlbums"><a href="discografiaadmin.html">ADMINISTRAR ÁLBUMES</a></li>
-            `;
-        }
-
     } else {
         console.error("No se autentico el usuario");
     }
