@@ -27,7 +27,7 @@
         <li id="contenedor_logo"><a href="index.html"><img src="img/Logo.png" alt="Inicio" id="logo"></a></li>
         <li><a href="noticias.html">NOTICIAS</a></li>
         <li><a href="calendar.html">CALENDARIO</a></li>
-        <li><a href="miembros.html">NOSOTROS</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
         <li><a href="contacto.html">CONTACTO</a></li>
       </ul>
     </nav>
@@ -86,7 +86,17 @@
     </form>
 
 
-    <div id="admin-concert-list"></div>
+    <section id="concert-list" class="concerts-admin-list"></section>
+    <section id="edit-concert-form" class="hidden">
+      <form class="panel">
+        <h3>Editar Concierto</h3>
+        <input type="text" id="edit-concert-date" required>
+        <input type="text" id="edit-concert-city" placeholder="Ciudad" required>
+        <input type="text" id="edit-concert-venue" placeholder="Lugar" required>
+        <button type="submit" class="btn">Guardar Cambios</button>
+        <button type="button" id="cancel-edit" class="btn">Cancelar</button>
+      </form>
+    </section>
   </section>
 
   <script type="module" src="js/calendaradmin.js"></script>

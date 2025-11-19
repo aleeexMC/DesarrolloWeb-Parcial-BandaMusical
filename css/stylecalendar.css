@@ -88,6 +88,11 @@ footer{
   padding-top: 95vh; /* igual que #date1 en tu CSS original */
   color: #ad2831;
 }
+#concert-list{
+  max-width: 900px;
+  margin: 0 auto; 
+  color: #ad2831;
+}
 
 .panel {
   background-color: rgba(0, 0, 0, 0.7);
@@ -167,6 +172,30 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.edit-btn{
+  appearance: none;
+  background: transparent;
+  color: #ad2831;
+  border: 0.3vh solid #ad2831;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 1vh 5vh;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  margin-top: 16px;
+}
+.delete-btn{
+    appearance: none;
+  background: transparent;
+  color: #ad2831;
+  border: 0.3vh solid #ad2831;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 1vh 5vh;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 8px;
 }
 
 
