@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +10,7 @@
 
 body {
     background-color: black;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -99,6 +103,10 @@ footer {
     footer {
         height: 8vw;
         font-size: 3vw;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
     }
 }
 

@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 body {
-  
+  font-family: 'Arial', sans-serif;
   background-image: url('../img/fondo de piedras.png');
 }
 
@@ -7,7 +11,7 @@ body {
 
 main {
   display: flex;
-  min-height: 80vh; /* Asegura altura suficiente */
+  min-height: 80vh; 
 }
 
 .desarrolladores {
@@ -23,6 +27,7 @@ main {
   color: white;
   font-size: 28px;
   margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
 }
 
 .dev-container {
@@ -35,7 +40,7 @@ main {
 
 .dev-card {
   text-align: center;
-  flex: 0 1 30%; /* Forzar 3 columnas (30% * 3 = 90% + gaps) */
+  flex: 0 1 30%; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +50,7 @@ main {
   width: 150px;
   height: 150px;
   background: white;
-  border-radius: 0; /* Cuadradas */
+  border-radius: 0; 
   overflow: hidden;
   
 }
@@ -64,7 +69,8 @@ main {
 .dev-card p {
   margin: 10px 0 0;
   font-weight: bold;
-  color: white; /* Nombre visible */
+  color: white; 
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .dev-card span {
@@ -121,8 +127,15 @@ footer {
   }
 
   .dev-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
+  }
+
+  .dev-card {
+    width: 100%;
+    flex: 0 0 auto;
   }
 
   .foto {
@@ -132,7 +145,7 @@ footer {
 
   .imagen-lateral {
     width: 100%;
-    height: 300px; /* Altura fija en móvil para que se vea */
+    height: 300px; 
     margin-top: 20px;
   }
 
