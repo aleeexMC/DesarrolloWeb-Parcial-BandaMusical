@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc, getDocs, collection } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, getDocs, collection, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDNjjpTf1CLS55FZaD8kt04-oPpo2ALxSg",
@@ -68,4 +68,45 @@ export const obtenerUsuario = async (id) => {
 export function obtenerIdUsuario() {
   const user = auth.currentUser;
   return user ? user.uid : null;
+}
+
+export async function guardarAlbum(album) {
+    try {
+        await addDoc(collection(db, "discografia"), album);
+        return true;
+    } catch (e) {
+        console.error("Error guardando álbum:", e);
+        return false;
+    }
+}
+
+export async function obtenerAlbums() {
+    try {
+        const snapshot = await getDocs(collection(db, "discografia"));
+
+        let albums = [];
+
+        snapshot.forEach((docu) => {
+            albums.push({
+                id: docu.id,     // necesitamos ID para eliminar
+                ...docu.data()
+            });
+        });
+
+        return albums;
+
+    } catch (e) {
+        console.error("Error obteniendo álbumes:", e);
+        return [];
+    }
+}
+
+export async function eliminarAlbum(id) {
+    try {
+        await deleteDoc(doc(db, "discografia", id));
+        return true;
+    } catch (e) {
+        console.error("Error eliminando álbum:", e);
+        return false;
+    }
 }
