@@ -179,15 +179,3 @@ Dentro del contenedor que le continua al nav (si al nav ya no le continua ningun
         display: none;
     }
 }
-
-
-#barraNavegacionPrincipal ul {
-    display: flex;
-    flex-wrap: wrap;    
-    justify-content: center;
-    gap: 1vw;         
-}
-
-#barraNavegacionPrincipal ul li a {
-    white-space: nowrap; /* para que el texto no se parta en dos líneas */
-}
