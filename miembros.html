@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrantes - Twenty One Pilots</title>
+    <title>Miembros - Twenty One Pilots</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/estilos_miembros.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="module" src="./js/autenticacion.js" defer></script>
-
 </head>
 
 <body>
@@ -25,8 +23,7 @@
                 <li><a href="historia.html">HISTORIA</a></li>
                 <li><a href="discografia.html">DISCOGRAFÍA</a></li>
                 <li><a href="galeria.html">GALERÍA</a></li>
-                <li id="contenedor_logo"><a href="index.html"><img src="img/Logo.png" alt="Inicio" id="logo"></a>
-                </li>
+                <li id="contenedor_logo"><a href="index.html"><img src="img/Logo.png" alt="Inicio" id="logo"></a></li>
                 <li><a href="noticias.html">NOTICIAS</a></li>
                 <li><a href="calendar.html">CALENDARIO</a></li>
                 <li><a href="integrantes.html">NOSOTROS</a></li>
@@ -35,10 +32,8 @@
         </nav>
     </header>
 
-    <div id="degradado_barra_nav"></div>
-
-    <div id="contenido">
-
+    <main>
+        <div id="degradado_barra_nav"></div>
         <section>
             <h1>Integrantes</h1>
             <p>Twenty One Pilots no es solo un dúo; es un proyecto que ha evolucionado desde sus cimientos en Columbus,
@@ -49,56 +44,28 @@
                 alcanza el reconocimiento mundial. Conoce a continuación a los integrantes que han escrito y siguen
                 escribiendo la historia de TØP.</p>
         </section>
+        <section id="contenido">
 
-        <section id="miembros-actuales">
-            <h2>Dúo Actual</h2>
+            <section id="miembros-actuales">
+                <h2>MIEMBROS ACTUALES</h2>
+                <div id="miembros-actuales-dinamicos"></div>
+            </section>
 
-            <div>
-                <div class="card-miembro-actual">
-                    <img src="img/integrantes/tyler_joseph.jpg" alt="Foto de Tyler Joseph" class="foto-miembro">
-                    <h3>Tyler Joseph</h3>
-                    <p class="rol-miembro">Voz principal, piano, ukelele, bajo, sintetizadores</p>
-                    <span class="años-actividad">Actividad: 2009 - Presente</span>
-                </div>
-
-                <div class="card-miembro-actual">
-                    <img src="img/integrantes/josh_dun.jpg" alt="Foto de Josh Dun" class="foto-miembro">
-                    <h3>Josh Dun</h3>
-                    <p class="rol-miembro">Batería, percusión, trompeta</p>
-                    <span class="años-actividad">Actividad: 2011 - Presente</span>
-                </div>
-            </div>
+            <section id="miembros-anteriores">
+                <h2>MIEMBROS ANTERIORES</h2>
+                <div id="miembros-anteriores-dinamicos"></div>
+            </section>
         </section>
-
-
-        <section id="miembros-anteriores">
-            <h2>Miembros Fundadores</h2>
-
-            <div>
-                <div class="card-miembro-anterior">
-                    <img src="img/integrantes/nick_thomas.jpg" alt="Foto de Nick Thomas" class="foto-miembro">
-                    <h3>Nick Thomas</h3>
-                    <p class="rol-miembro">Bajo, programación</p>
-                    <span class="años-actividad">Actividad: 2009 - 2011</span>
-                </div>
-
-                <div class="card-miembro-anterior">
-                    <img src="img/integrantes/chris_salih.png" alt="Foto de Chris Salih" class="foto-miembro">
-                    <h3>Chris Salih</h3>
-                    <p class="rol-miembro">Batería, percusión</p>
-                    <span class="años-actividad">Actividad: 2009 - 2011</span>
-                </div>
-            </div>
-        </section>
-
-        <div id="degradado_barra_foot"></div>
-
-    </div>
+        <div id="degradado_barra_foot">
+            
+        </div>
+    </main>
 
     <footer>
         Derechos reservados 2025
     </footer>
 
+    <script type="module" src="js/miembros.js"></script>
 </body>
 
 </html>
