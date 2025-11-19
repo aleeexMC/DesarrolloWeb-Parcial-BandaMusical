@@ -13,10 +13,25 @@ body {
     margin: 0;
 }
 
+input:focus{
+    border: 0.35vw solid rgb(245, 31, 29);
+    outline: none;
+}
+
+h3{
+    font-size: 4vw;
+    margin-top: 4vw; 
+    font-family: 'Bebas Neue'; 
+    color: rgb(245, 31, 29);
+}
+
+td{
+    text-align: center;
+}
 
 #adminWrapper {
-    max-width: 1200px;
-    margin: 4vw auto;
+    max-width: 950px;
+    margin: 10vw auto;
     padding: 3vw;
     background: rgba(0, 0, 0, 0.75);
     border: 0.5vw solid rgb(245, 31, 29);
@@ -135,7 +150,7 @@ body {
     background: rgba(245, 31, 29, 0.15);
 }
 
-.btnEliminar {
+.btnEliminar, .btnEditar {
     background: rgb(245, 31, 29);
     padding: 0.5vw 1vw;
     border: none;
@@ -146,11 +161,9 @@ body {
     font-family: monospace;
 }
 
-.btnEliminar:hover {
+.btnEliminar:hover, .btnEditar:hover {
     background: rgb(150, 0, 0);
 }
-
-/* ------------------- RESPONSIVE ------------------- */
 
 @media (max-width: 900px) {
     .fila {

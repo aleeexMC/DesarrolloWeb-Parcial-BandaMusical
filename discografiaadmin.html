@@ -14,10 +14,6 @@
 
 <body>
 
-    <nav>
-        <h2>Panel Administrativo - Discografía</h2>
-    </nav>
-
     <div id="adminWrapper">
 
         <h1>Administrar Álbumes</h1>
@@ -41,11 +37,6 @@
                     <label for="portada">URL de Portada</label>
                     <input type="text" id="portada" required>
                 </div>
-
-                <div class="campo">
-                    <label for="descripcion">Descripción</label>
-                    <textarea id="descripcion" rows="3"></textarea>
-                </div>
             </div>
 
             <div class="fila">
@@ -60,31 +51,11 @@
                 </div>
             </div>
 
-            <h3 style="color: rgb(252, 207, 2); font-family: 'Bebas Neue'; letter-spacing: 1px;">
-                Canciones del Álbum
-            </h3>
-
-            <div class="fila">
-                <div class="campo">
-                    <label for="nombreCancion">Nombre de la canción</label>
-                    <input type="text" id="nombreCancion">
-                </div>
-
-                <div class="campo">
-                    <label for="duracionCancion">Duración</label>
-                    <input type="text" id="duracionCancion" placeholder="3:15">
-                </div>
-
-                <button type="button" id="agregarCancion">Agregar canción</button>
-            </div>
-
-            <ul id="listaCanciones"></ul>
-
             <button type="submit" id="guardarAlbum">Guardar Álbum</button>
 
         </form>
 
-        <h3 class="titulo-tabla" style="margin-top: 4vw; font-family: 'Bebas Neue'; color: rgb(245, 31, 29);">
+        <h3 class="titulo-tabla">
             Discografía existente
         </h3>
 
@@ -94,7 +65,6 @@
                     <th>Portada</th>
                     <th>Título</th>
                     <th>Año</th>
-                    <th>Canciones</th>
                     <th>Spotify</th>
                     <th>YouTube</th>
                     <th>Acciones</th>

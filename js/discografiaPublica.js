@@ -1,4 +1,15 @@
-import { obtenerAlbums } from "./firebase-config.js";
+import { obtenerAlbums,auth } from "./firebase-config.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
+        document.querySelector("#btnGestionarDiscos").innerHTML += `
+            <a id="gestionarDiscos" href="./discografiaadmin.html">Administrar álbumes</a>
+        `;
+    } else {
+
+    }
+});
 
 async function cargarDiscografia() {
 
