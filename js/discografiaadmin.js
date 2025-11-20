@@ -47,7 +47,6 @@ form.addEventListener("submit", async (e) => {
 
     let urlPortada = null;
 
-    // Si hay archivo nuevo, subirlo a Cloudinary
     if (archivoPortada) {
         const indicador = document.getElementById("indicadorCarga");
         indicador.style.display = "block";
@@ -62,7 +61,6 @@ form.addEventListener("submit", async (e) => {
         }
     }
 
-    // Si estamos editando y NO hay archivo nuevo, mantener la portada anterior
     if (editando && !urlPortada) {
         const albumActual = await obtenerAlbum(idEditando);
         urlPortada = albumActual.portada;
@@ -153,7 +151,7 @@ async function cargarDiscografia() {
             document.getElementById("spotify").value = album.spotify || "";
             document.getElementById("youtube").value = album.youtube || "";
 
-            // Mostrar vista previa de la portada actual
+            
             const previsualizacion = document.getElementById("previsualizacionPortada");
             previsualizacion.innerHTML = `
                 <p style="color:#00cc66; font-size:0.9vw; margin-bottom:0.5vw;">Portada actual:</p>
@@ -166,13 +164,12 @@ async function cargarDiscografia() {
             idEditando = album.id;
             document.getElementById("guardarAlbum").innerText = "Guardar cambios";
             
-            // Scroll hacia el formulario
+        
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 }
 
-// Preview de imagen al seleccionar archivo
 document.getElementById("portadaArchivo").addEventListener("change", (e) => {
     const archivo = e.target.files[0];
     const previsualizacion = document.getElementById("previsualizacionPortada");
