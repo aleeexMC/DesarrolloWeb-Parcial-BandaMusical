@@ -3,11 +3,11 @@ export const CLOUDINARY_CONFIG = {
     uploadPreset: 'twenty_one_pilots_members'
 };
 
-export async function subirImagenCloudinary(archivo) {
+export async function subirImagenCloudinary(archivo, carpeta = 'members') {
     const formData = new FormData();
     formData.append('file', archivo);
     formData.append('upload_preset', CLOUDINARY_CONFIG.uploadPreset);
-    formData.append('folder', 'members');
+    formData.append('folder', carpeta);
 
     try {
         const response = await fetch(
@@ -28,4 +28,8 @@ export async function subirImagenCloudinary(archivo) {
         console.error('Error Cloudinary:', error);
         throw new Error('No se pudo subir la imagen');
     }
+}
+
+export async function subirPortadaAlbum(archivo) {
+    return await subirImagenCloudinary(archivo, 'albums');
 }
