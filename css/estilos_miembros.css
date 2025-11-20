@@ -196,4 +196,26 @@ header {
         margin: 0.55vw 1vw 1vw 1vw !important; 
         text-align: center;
     }
+
+    
+    #btnAgregarMiembro {
+        padding: 4vw 6vw !important;
+        font-size: 5vw !important;
+        margin: 4vw auto !important;
+    }
+
+    .botones-admin button {
+        padding: 3vw 4vw !important;
+        font-size: 4vw !important;
+        margin: 1vw !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   
+    .botones-admin button {
+        padding: 2vw 3vw !important;
+        font-size: 2.5vw !important;
+        margin: 0.5vw !important;
+    }
 }
