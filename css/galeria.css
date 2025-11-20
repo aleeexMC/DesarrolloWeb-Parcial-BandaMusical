@@ -13,12 +13,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 #portada_galeria {
     position: relative;
     width: 100%;
     height: 60vh;
     overflow: hidden;
+    z-index: -1;
 }
 
 #imagen_portada_galeria {
@@ -38,8 +38,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 150px; 
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    height: 150px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
     z-index: 1;
     pointer-events: none;
 }
@@ -51,6 +51,7 @@ body {
     gap: 0;
     list-style: none;
     width: 100%;
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -104,12 +105,14 @@ footer {
         height: 8vw;
         font-size: 3vw;
     }
-    
+
     .galeria-grid {
         grid-template-columns: 1fr;
     }
-}
 
-#btnMostrar {
-    z-index: 10001;
+    .galeria-grid li:hover img {
+        transform: none;
+        z-index: -1;
+        position: relative;
+    }
 }

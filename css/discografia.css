@@ -31,12 +31,7 @@ body {
     background: #69050b;
     padding: 1.5vw;
     text-align: center;
-    transition: transform 0.2s ease;
     height: auto;
-}
-
-.disco:hover {
-    transform: translateY(-0.9vw);
 }
 
 .portada {
