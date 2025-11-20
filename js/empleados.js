@@ -10,6 +10,7 @@ onAuthStateChanged(auth, async (user) => {
             btn.disabled = false;
         } else {
             btn.disabled = true;
+            btn.style.background = 'rgb(125, 19, 17)';
         }
     }
 });
