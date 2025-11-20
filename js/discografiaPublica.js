@@ -31,9 +31,9 @@ async function cargarDiscografia() {
 
             ${
                 album.spotify 
-                ? `<iframe style="border-radius:12px" src="${album.spotify}"
-                     width="100%" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                   </iframe>`
+                ? (album.spotify.includes('<iframe') 
+                    ? album.spotify 
+                    : `<iframe style="border-radius:12px" src="${album.spotify}" width="100%" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`)
                 : `<p style="color:#f2f2f2; font-size:1vw; opacity:0.6">Sin Spotify</p>`
             }
 

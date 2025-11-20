@@ -107,6 +107,64 @@ td{
     background-color: rgb(123, 101, 1);
 }
 
+#btnRegresar {
+    display: inline-block;
+    background-color: rgb(252, 207, 2);
+    color: black;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(14px, 1.6vw, 22px);
+    font-weight: bold;
+    margin-bottom: 2vw;
+    transition: background-color 0.25s;
+    text-transform: uppercase;
+}
+
+#btnRegresar:hover {
+    background-color: rgb(123, 101, 1);
+}
+
+.campo small {
+    display: block;
+    margin-top: 0.5vw;
+    color: #666;
+    font-size: 0.9vw;
+}
+
+.campo small.hint-small {
+    margin-top: 0.3vw;
+    font-size: 0.85vw;
+}
+
+#previsualizacionPortada {
+    margin-top: 1vw;
+    text-align: center;
+}
+
+#previsualizacionPortada .preview-label {
+    color: #00cc66;
+    font-size: 0.9vw;
+    margin-bottom: 0.5vw;
+}
+
+#previsualizacionPortada img {
+    max-width: 200px;
+    border: 2px solid #00cc66;
+}
+
+#previsualizacionPortada .preview-hint {
+    color: #666;
+    font-size: 0.85vw;
+    margin-top: 0.5vw;
+}
+
+#indicadorCarga {
+    display: none;
+    color: #00cc66;
+    margin-top: 0.5vw;
+    font-weight: bold;
+}
 
 #listaCanciones {
     margin-top: 1vw;
