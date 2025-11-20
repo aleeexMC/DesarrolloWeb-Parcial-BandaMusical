@@ -34,7 +34,7 @@ main {
     background-repeat: no-repeat;
 }
 
-#contenido{
+#contenido {
     padding: 0 5%;
 }
 
@@ -65,8 +65,110 @@ td {
     font-size: 1.5vw;
 }
 
+#agregarEmpleadoModal {
+    margin: 0 0 2.5%;
+    padding: 0 5%;
+    background-color: rgb(245, 31, 29);
+    color: black;
+    align-self: flex-start;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 2vw;
+    font-family: monospace;
+    border: none;
+}
+
+#agregarEmpleadoModal:hover {
+    background-color: rgb(125, 19, 17);
+}
+
+#contactModal .modal-dialog {
+    max-width: 600px !important;
+    margin-top: 5vh;
+}
+
+#contactModal .modal-content {
+    background: #1a1a1a !important;
+    border: 0.3vw solid #520308 !important;
+    padding: 2vw !important;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#contactModal .modal-header {
+    border-bottom: 0.3vw solid #520308 !important;
+    padding-bottom: 1vw;
+}
+
+#contactModal .modal-title {
+    color: #fff;
+    font-size: 2.5vw;
+    font-family: "Bebas Neue", serif;
+    text-transform: uppercase;
+}
+
+#contactModal .modal-body label {
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-top: 1vw;
+}
+
+#contactModal .modal-body input {
+    width: 100%;
+    padding: 0.8vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+    border: 0.2vw solid #520308;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+#contactModal .modal-footer {
+    border-top: none !important;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5vw;
+}
+
+#contactModal .btn-primary {
+    background: #00cc66 !important;
+    color: #000 !important;
+    border: none;
+    font-family: "Bebas Neue", serif;
+    font-size: 1.3vw;
+    padding: 1vw 2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#contactModal .btn-secondary {
+    background: #888 !important;
+    color: #000 !important;
+    border: none;
+    font-family: "Bebas Neue", serif;
+    font-size: 1.3vw;
+    padding: 1vw 2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#contactModal .btn-primary:hover,
+#contactModal .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
 @media screen and (max-width:767px) {
-    
+
+    header{
+        height: 0;
+        overflow: visible;
+    }
 
     main {
         padding: 15vw 0 0;
@@ -75,6 +177,25 @@ td {
     main h1 {
         font-size: 12vw;
         text-align: center;
+    }
+
+    #contactModal .modal-title {
+        font-size: 6vw;
+    }
+
+    #contactModal .modal-body label {
+        font-size: 4vw;
+    }
+
+    #contactModal .modal-body input {
+        font-size: 3.5vw;
+        padding: 3vw;
+    }
+
+    #contactModal .btn-primary,
+    #contactModal .btn-secondary {
+        font-size: 4vw;
+        padding: 3vw 5vw;
     }
 
 }

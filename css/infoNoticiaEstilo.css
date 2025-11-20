@@ -19,8 +19,7 @@ body {
     width: 90%;
 }
 
-
-header {
+#header {
     border-bottom: 2px solid #ff0000;
     padding-bottom: 20px;
     margin-bottom: 30px;
@@ -126,7 +125,6 @@ h1.main-title {
     padding-left: 15px;
 }
 
-/* FORMULARIO */
 .comment-form {
     background-color: #111;
     padding: 20px;
@@ -300,10 +298,11 @@ footer {
 
 
     h1.main-title {
+        padding-top: 15%;
         font-size: 2.5rem;
     }
 
-    header {
+    #header {
         margin-bottom: 20px;
         padding-bottom: 15px;
     }
